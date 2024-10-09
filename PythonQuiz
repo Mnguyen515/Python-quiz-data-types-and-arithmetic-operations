@@ -4,36 +4,36 @@
 
 QUESTION 1
 # Declare an integer variable
-age = _______
+age = 28
 
 # Declare a float variable 
 # Height EX: 5.5 | 6.0
-height = _______
+height = 5.7
 
 # Declare a string variable
-name = _______
+name = 'mike'
 
 
 
 QUESTION 2
 # Create a list of five fruits
-fruits = _______
+fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi']
 
 # Print the second fruit
-print(________)
+print(fruits[1])
 
 
 
 QUESTION 3
 # Create a dictionary with student information
 student = {
-    "name": _______,
-    "age": _______,
-    "AFSC": _______
+    "name": 'mike',
+    "age": 28,
+    "AFSC": '1D771P'
 }
 
 # Print the student's AFSC
-print(________)
+print(student['AFSC'])
 
 
 
@@ -41,10 +41,10 @@ QUESTION 4
 numbers = [10, 20, 30]
 
 # Add 40 to the list
-numbers._____(____)
+numbers.append(40)
 
 # Remove 20 from the list
-numbers._____(____)
+numbers.remove(20)
 
 # Print the updated list
 print(numbers)  # Expected Output: [10, 30, 40]
@@ -63,11 +63,11 @@ class Person:
         print(f"Name: {self.name}, Age: {self.age}")
     
     def update_age(self, new_age):
-        self.age = _______
+        self.age = new_age
         
 # Example Usage:
 person1 = Person("Charlie", 30)
-person1.update_age(xx)  # Add age that you will be on your next birthday
+person1.update_age(31)  # Add age that you will be on your next birthday
 person1.display_info()  # Expected Output: "Name: Charlie, Age: 31" 
 
 
@@ -85,24 +85,34 @@ employees = {
         "name": "George",
         "age": 34,
         "department": "Engineering"
+    },
+    "E003": {
+        "name": "Mike",
+        "age": 29,
+        "department": "HR"
+    },
+    "E004": {
+        "name": "John",
+        "age": 34,
+        "department": "Engineering"
     }
 }
 
 # Print the department of employee E002
-print(employees["E001"][________])  # Expected Output: "Engineering"
+print(employees["E002"]['department'])  # Expected Output: "Engineering"
 
 
 
 QUESTION 7
-Loop through a dictionary and print its keys and values.
+# Loop through a dictionary and print its keys and values.
 
-Instructions:
-Given the employees dictionary from Question 6, iterate through it and print each employee's ID, name, and department in the format:
-ID: E001, Name: Fiona, Department: HR
-ID: E002, Name: George, Department: Engineering
+# Instructions:
+# Given the employees dictionary from Question 6, iterate through it and print each employee's ID, name, and department in the format:
+# ID: E001, Name: Fiona, Department: HR
+# ID: E002, Name: George, Department: Engineering
 
 for emp_id, details in employees.items():
-    print(f"ID: {emp_id}, Name: {________}, Department: {________}")
+    print(f"ID: {emp_id}, Name: {employees}, Department: {employees}")
 
 
 
@@ -111,16 +121,16 @@ QUESTION 8
 # Create a tuple named color with the RGB values (255, 10, 0).
 # Print the green component of the color.
 # Create a tuple for RGB color
-color = _______
+color = (255, 10, 0)
 
 # Print the green component
-print(color[____])
+print(color[1])
 
 
 
 QUESTION 9
-Create a Function that Returns Multiple Values
-Define a function that returns a tuple containing multiple data types.
+# Create a Function that Returns Multiple Values
+# Define a function that returns a tuple containing multiple data types.
 
 # Create a function get_person_info that takes name (string), age (integer), and height (float) as parameters.
 # The function should return a tuple containing these three values.
@@ -128,7 +138,7 @@ Define a function that returns a tuple containing multiple data types.
 # Print these variables.
 
 def get_person_info(name, age, height):
-    return (______, _______, _______)
+    return (name, age, height)
 
 # Example Usage:
 person_info = get_person_info("Hannah", 27, 5.5)
@@ -140,22 +150,22 @@ print(person_height) # Expected Output: 5.5
 
 
 QUESTION 10
-Create a Class with a List Attribute
-Create a class ShoppingCart with attribute items (a list).
-Implement methods add_item to add an item to the cart and remove_item to remove an item.
-Implement a method display_items to print all items in the cart.
-Demonstrate adding "Apples" and "Bread", removing "Apples", and displaying the items.
+# Create a Class with a List Attribute
+# Create a class ShoppingCart with attribute items (a list).
+# Implement methods add_item to add an item to the cart and remove_item to remove an item.
+# Implement a method display_items to print all items in the cart.
+# Demonstrate adding "Apples" and "Bread", removing "Apples", and displaying the items.
 
 class ShoppingCart:
     def __init__(self):
         self.items = []
     
     def add_item(self, item):
-        self.items.append(_____)
+        self.items.append(item)
     
     def remove_item(self, item):
         if item in self.items:
-            self.items.remove(_____)
+            self.items.remove(item)
     
     def display_items(self):
         print("Shopping Cart Items:", self.items)
@@ -170,10 +180,10 @@ cart.display_items()  # Expected Output: "Shopping Cart Items: ['Bread']"
 
 
 QUESTION 11
-Calculate the Sum of Two Numbers
+# Calculate the Sum of Two Numbers
 
 def sum_two_numbers(a, b):
-    return _______
+    return a + b
 
 # Example Usage:
 result = sum_two_numbers(10, 5)
@@ -182,9 +192,9 @@ print(result)  # Expected Output: 15
 
 
 QUESTION 12
-Subtract Two Numbers
+# Subtract Two Numbers
 def subtract_numbers(a, b):
-    return _______
+    return a - b
 
 # Example Usage:
 result = subtract_numbers(20, 8)
@@ -202,7 +212,7 @@ QUESTION 13
 def multiply_list(numbers):
     product = 1
     for num in numbers:
-        product *= _______
+        product *= num
     return product
 
 # Example Usage:
@@ -212,13 +222,13 @@ print(result)  # Expected Output: 24
 
 
 QUESTION 14
-Divide Two Numbers
+# Divide Two Numbers
 # Implement a function that divides the first number by the second and returns the result. Handle division by zero gracefully.
 def divide_numbers(a, b):
     if b == 0:
         return "Error: Division by zero"
     else:
-        return _______
+        return a / b
 
 # Example Usage:
 result1 = divide_numbers(15, 3)
@@ -233,7 +243,7 @@ QUESTION 15
 # Calculate Modulus of Two Numbers
 # Create a function that returns the modulus of two numbers.
 def modulus_numbers(a, b):
-    return _______
+    return a % b
 
 # Example Usage:
 result = modulus_numbers(17, 5)
@@ -242,13 +252,13 @@ print(result)  # Expected Output: 2
 
 
 QUESTION 16
-Increment a Number
+# Increment a Number
 # Write a function that increments a given integer by 1 and returns the result.
 # Define a function named increment that takes one parameter num.
 # Return the result of num + 1.
 # Call the function with the number 7 and print the result.
 def increment(num):
-    return _______
+    return num + 1
 
 # Example Usage:
 result = increment(7)
@@ -265,7 +275,7 @@ QUESTION 17
 # Call the function with price = 100 and tax_rate = 0.05 (5%) and print the result.
 
 def total_price(price, tax_rate):
-    total = price + (price * _______)
+    total = price + (price * tax_rate)
     return total
 
 # Example Usage:
@@ -285,7 +295,7 @@ QUESTION 18
 def range_of_list(numbers):
     max_num = max(numbers)
     min_num = min(numbers)
-    difference = _______ - _______
+    difference = max_num - min_num
     return difference
 
 # Example Usage:
@@ -298,7 +308,7 @@ QUESTION 19
 # Calculate the Average of Numbers in a List
 # Write a function that calculates and returns the average of numbers in a list.
 
-Instructions:
+# Instructions:
 
 # Define a function named calculate_average that takes a list of numbers as a parameter.
 # Sum all the numbers and divide by the count of numbers.
@@ -307,7 +317,7 @@ Instructions:
 
 def calculate_average(numbers):
     total = sum(numbers)
-    average = _______ / _______
+    average = total / len(numbers)
     return average
 
 # Example Usage:
@@ -317,7 +327,7 @@ print(result)  # Expected Output: 18.0
 
 
 QUESTION 20
-Create a Class with a Multi-dimensional List Attribute
+# Create a Class with a Multi-dimensional List Attribute
 # Define a class that contains a multi-dimensional list and perform operations on it.
 
 # Create a class Matrix with an attribute data representing a 3x3 matrix (a list of lists).
@@ -338,7 +348,7 @@ class Matrix:
             print(row)
     
     def update_element(self, row, col, value):
-        self.data[row - 1][col - 1] = _______
+        self.data[row - 1][col - 1] = value
         
 # Example Usage:
 matrix = Matrix()
@@ -353,4 +363,4 @@ matrix.display_matrix()
 
 
 
-Please read each question and task carefully. If you have any questions, please raise your hand. 
+# Please read each question and task carefully. If you have any questions, please raise your hand. 
