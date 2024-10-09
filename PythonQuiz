@@ -103,7 +103,7 @@ print(employees["E002"]['department'])  # Expected Output: "Engineering"
 
 
 
-QUESTION 7
+# QUESTION 7
 # Loop through a dictionary and print its keys and values.
 
 # Instructions:
@@ -112,7 +112,7 @@ QUESTION 7
 # ID: E002, Name: George, Department: Engineering
 
 for emp_id, details in employees.items():
-    print(f"ID: {emp_id}, Name: {employees}, Department: {employees}")
+    print(f"ID: {emp_id}, Name: {details}, Department: {details}")
 
 
 

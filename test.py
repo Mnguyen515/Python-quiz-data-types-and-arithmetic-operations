@@ -16,4 +16,4 @@ print(employees["E002"]['department'])  # Expected Output: "Engineering"
 
 
 for emp_id, details in employees.items():
-    print(f"ID: {emp_id}, Name: {emp_id}, Department: {emp_id}")
+    print(f"ID: {emp_id}, Name: {details}, Department: {details}")
